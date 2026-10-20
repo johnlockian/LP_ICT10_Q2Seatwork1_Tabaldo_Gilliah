@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <title>Q2 Seatwork 1</title>
+    <style>
+        body {
+            min-height: 100vh;
+            margin: 0;
+            padding: 32px 20px;
+            box-sizing: border-box;
+            background-color: #eaf6ff;
+            /* Repeat a small dot to create the page's background pattern. */
+            background-image: radial-gradient(#c8e5f5 1px, transparent 1px);
+            background-size: 18px 18px;
+            color: #3875a7;
+            font-family: 'Nunito', Arial, sans-serif;
+        }
+        .header, main {
+            margin: 0 auto;
+            text-align: center;
+            border: 2px solid #c8e5f5;
+            border-radius: 12px;
+        }
+        .header {
+            max-width: 760px;
+            padding: 20px;
+            background: #fff5cc;
+        }
+        .header h1 {
+            margin: 0 0 6px;
+            font-family: 'Nunito', Arial, sans-serif;
+            font-size: clamp(1.7rem, 5vw, 2.6rem);
+        }
+        .header p { margin: 0; font-size: 1.2rem; }
+        main {
+            max-width: 520px;
+            margin-top: 30px;
+            padding: 28px;
+            background: #ffffff;
+            box-shadow: 0 6px 18px rgba(40, 68, 92, .1);
+        }
+        input[type="text"] {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 12px;
+            border: 2px solid #c8e5f5;
+            border-radius: 8px;
+            background: #f7fcff;
+            color: #28445c;
+            font: 600 1rem 'Nunito', sans-serif;
+        }
+        input[type="text"]:focus { outline: 2px solid #f2d66d; }
+        input[type="button"] {
+            margin-top: 18px;
+            padding: 11px 28px;
+            border: 0;
+            border-radius: 8px;
+            background: #f7df85;
+            color: #28445c;
+            font: 800 1rem 'Nunito', sans-serif;
+            cursor: pointer;
+        }
+        input[type="button"]:hover { background: #f2d66d; }
+        #result { margin-top: 20px; font-size: 1.15rem; }
+        footer { margin-top: 32px; text-align: center; }
+        footer span { color: #306385; font-weight: 600; }
+        @media (max-width: 480px) {
+            body { padding: 20px 14px; }
+            main { padding: 22px 18px; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+    <h1>Marching Band Checker</h1>
+    <p>Candidate Verification System</p>
+    </header>
+    
+    
+    <main>
+        <form>
+            <input type="text" id="f_name" placeholder="Enter your first name." required><br><br>
+            <input type="text" id="l_name" placeholder="Enter your last name." required>
+            <!-- PyScript calls candidate_checker in main.py when clicked. -->
+            <input type="button" py-click="candidate_checker" value="Enter">
+        </form>
+        <div id='result'></div>
+    </main>
+    <br><br><br><br>
+    <footer>
+        &copy; 2026 <span>Marching Band Club</span> &bull; Seatwork 1 <span>ICT</span> 2Q.<br><br>
+         <i>NOTE: Some names you can use include current 10 Sapphire band members :3</i>
+    </footer>
+    <script type="py" src="main.py"></script>
+</body>
+</html>
